@@ -18,19 +18,19 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: alpine-latest
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v1
 
-      - uses: lukka/get-cmake@latest
-        with: 
-          cmakeListsTxtPath: '${{ github.workspace }}/CMakeLists.txt'
-    
-      - name: apk
-        run: apk add cmake
+      - name: actions-setup-cmake
+        uses: jwlawson/actions-setup-cmake@v1.12
+
+      - name: version
+        run: cmake --version
+        
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: gcc -v
