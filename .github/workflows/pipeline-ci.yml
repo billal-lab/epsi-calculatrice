@@ -26,20 +26,12 @@ jobs:
       - uses: lukka/get-cmake@latest
         with: 
           cmakeListsTxtPath: '${{ github.workspace }}/CMakeLists.txt'
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: gcc -v
-
-      # Runs a set of commands using the runners shell
-      - name: clone
-        run: git clone https://github.com/billal-lab/epsi-calculatrice.git
         
       - name: cd espi
-        run: cd epsi-calculatrice
+        run: cd ${{ github.workspace }}
         
       - name: cd espi
-        run: cd epsi-calculatrice
+        run: ls
         
       - name: ls
         run: ls
