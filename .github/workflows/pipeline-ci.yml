@@ -33,6 +33,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           mkdir build,
-          cmake ..,
-          make,
-          make test
+          ls,
+          cd ..,
+          ls
