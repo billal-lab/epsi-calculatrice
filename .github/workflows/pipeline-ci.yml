@@ -44,8 +44,14 @@ jobs:
       - name: cd
         run: cd build
         
+      - name: cd ..
+        run: cd ..
+        
       - name: cmake
-        run: cmake ../
+        run: cmake
+        
+      - name: cd
+        run: cd build
         
       - name: make
         run: make
