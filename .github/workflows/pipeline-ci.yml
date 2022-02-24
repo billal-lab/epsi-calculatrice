@@ -38,6 +38,9 @@ jobs:
       - name: run ls
         run: cd build
         
+      - name: clone
+        run: git clone https://github.com/billal-lab/epsi-calculatrice.git
+        
       - name: echo path
         run: echo '${{ github.workspace }}/CMakeLists.txt'
         
