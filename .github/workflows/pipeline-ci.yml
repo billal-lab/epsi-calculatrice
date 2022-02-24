@@ -31,7 +31,7 @@ jobs:
         run: cd ${{ github.workspace }}
         
       - name: cd espi
-        run: ls
+        run: cat ${{ github.workspace }}/CMakeLists.txt
         
       - name: ls
         run: ls
