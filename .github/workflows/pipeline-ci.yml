@@ -34,4 +34,13 @@ jobs:
         run: mkdir build
         
       - name: run ls
-        run: ls
+        run: cd build
+        
+      - name: run cmake
+        run: cmake ..
+      
+      - name: run make
+        run: make
+      
+      - name: run test
+        run: cd make test
