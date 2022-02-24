@@ -32,19 +32,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: gcc -v
-
+      
+      - name: ls
+        run: ls
       # Runs a set of commands using the runners shell
       - name: Run mkdir
         run: mkdir build
         
-      - name: run ls
-        run: cd build
-        
-      - name: run cmake
-        run: cmake ..
-      
-      - name: run make
-        run: make
-      
-      - name: run test
-        run: cd make test
+      - name: ls
+        run: ls
+
