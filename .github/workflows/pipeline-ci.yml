@@ -41,16 +41,20 @@ jobs:
       - name: Run mkdir
         run: mkdir build
         
-      - name: cd
+      - name: cmake cmake [options] -S <path-to-source> -B <path-to-build>
+        run: cmake -S . -B ./build
+        
+      - name: cd build
         run: cd build
         
-      - name: cmake cmake [options] -S <path-to-source> -B <path-to-build>
-        run: cmake -S ../ -B .
-        
+      
       - name: make
-        run: make
+        run: ls
         
-      - name: test
-        run: make test
+      - name: cd ..
+        run: cd ..
+        
+      - name: cd .. ls
+        run: ls -l
       
 
