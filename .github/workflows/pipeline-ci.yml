@@ -35,4 +35,4 @@ jobs:
           mkdir build,
           ls,
           cd ..,
-          ls
+          ls.
