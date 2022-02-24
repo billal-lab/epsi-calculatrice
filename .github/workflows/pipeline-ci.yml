@@ -32,11 +32,11 @@ jobs:
         run: gcc -v
 
       # Runs a set of commands using the runners shell
-      - name: ls 
-        run: ls
+      - name: ls -l
+        run: ls -l
         
       - name: cd ${{ github.workspace }}
         run: cd ${{ github.workspace }}
         
-      - name: ls
-        run: ls
+      - name: ls -l
+        run: ls -l
