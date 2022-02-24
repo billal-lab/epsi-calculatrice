@@ -47,8 +47,8 @@ jobs:
       - name: cd ..
         run: cd ..
         
-      - name: cmake
-        run: cmake
+      - name: cmake cmake [options] -S <path-to-source> -B <path-to-build>
+        run: cmake -S . -B ./build
         
       - name: cd
         run: cd build
