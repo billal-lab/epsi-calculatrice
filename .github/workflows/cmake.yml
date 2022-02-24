@@ -51,7 +51,12 @@ jobs:
         
       - name: ls
         run: ls
-      
+      - name: Test
+        working-directory: artifactTest
+      # Execute tests defined by the CMake configuration.  
+      # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more details
+        run: ctest -C ${{env.BUILD_TYPE}}
+        
       - name: cd
         run: cd artifactTest
         
