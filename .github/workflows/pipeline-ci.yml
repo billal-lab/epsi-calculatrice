@@ -44,10 +44,13 @@ jobs:
       - name: cd
         run: cd build
         
-      - name: cd
-        run: cd ..
+      - name: cmake
+        run: cmake ../
         
-      - name: ls
-        run: ls
+      - name: make
+        run: make
+        
+      - name: test
+        run: make test
       
 
