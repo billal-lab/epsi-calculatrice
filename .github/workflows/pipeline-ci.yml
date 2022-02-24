@@ -36,7 +36,10 @@ jobs:
         run: git clone https://github.com/billal-lab/epsi-calculatrice.git
         
       - name: cd espi
-        run: cd epsi-calculatrice/epsi-calculatrice
+        run: cd epsi-calculatrice
+        
+      - name: ls espi
+        run: ls
         
       - name: ls
         run: ls
