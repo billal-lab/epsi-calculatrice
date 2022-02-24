@@ -23,14 +23,38 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
 
+      - name: actions-setup-cmake
+        uses: jwlawson/actions-setup-cmake@v1.12
+
+      - name: version
+        run: cmake --version
+        
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: gcc -v
-
+      
+      - name: ls
+        run: ls
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build ********************,
-          echo test, and deploy your project *********************.
+      - name: Run mkdir
+        run: mkdir build
+        
+      - name: cmake cmake [options] -S <path-to-source> -B <path-to-build>
+        run: cmake -S . -B ./build
+        
+      - name: cd build
+        run: cd build
+        
+      
+      - name: ls
+        run: make
+        
+      - name: cd ..
+        run: cd ..
+        
+      - name: ls
+        run: ls -l
+      
+
