@@ -49,7 +49,7 @@ jobs:
         
       
       - name: ls
-        run: ls
+        run: make
         
       - name: cd ..
         run: cd ..
