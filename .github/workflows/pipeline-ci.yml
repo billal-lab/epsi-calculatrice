@@ -24,23 +24,20 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: lukka/get-cmake@latest
+        with: 
+          cmakeListsTxtPath: '${{ github.workspace }}/CMakeLists.txt'
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: gcc -v
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Run mkdir
         run: mkdir build
         
       - name: run ls
         run: cd build
         
-      - name: run cmake
-        run: cmake ..
+      - name: echo path
+        run: echo '${{ github.workspace }}/CMakeLists.txt'
       
-      - name: run make
-        run: make
-      
-      - name: run test
-        run: cd make test
