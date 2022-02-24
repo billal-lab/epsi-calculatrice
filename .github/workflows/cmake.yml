@@ -51,5 +51,14 @@ jobs:
         
       - name: ls
         run: ls
+      
+      - name: cd
+        run: cd artifactTest
+        
+      - name: ls
+        run: ls
+        
+      - name: cmake
+        run: cmake --v
 
       
