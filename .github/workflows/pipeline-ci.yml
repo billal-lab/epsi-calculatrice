@@ -40,4 +40,13 @@ jobs:
         
       - name: echo path
         run: echo '${{ github.workspace }}/CMakeLists.txt'
+        
+      - name: echo path
+        run: ls
+        
+      - name: echo path
+        run: cd ..
+        
+      - name: echo path
+        run: ls
       
